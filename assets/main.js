@@ -43,6 +43,7 @@
   var lightbox = document.getElementById('lightbox');
   if (!lightbox) return; // page has no media gallery
 
+  var body = document.body;
   var content = lightbox.querySelector('.lightbox-content');
   var caption = lightbox.querySelector('.lightbox-caption');
   var closeBtn = lightbox.querySelector('.lightbox-close');
@@ -77,7 +78,7 @@
     lightbox.classList.remove('open');
     body.classList.remove('lb-open');
     // stop any playing video when closing
-    var video = content.querySelector('video');
+    const video = content.querySelector('video');
     if (video) video.pause();
   }
 
